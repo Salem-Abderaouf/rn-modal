@@ -1,20 +1,29 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 
+import Splash from './Screen/Splash'
+import Menu from './Screen/Menu'
+import AfterMenu from './Screen/AfterMenu'
+import ListGuid from './Screen/ListGuid'
+import GuidDetails from './Screen/GuidDetails'
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
 
   return (
-    <View style={styles.wrapper}>
-      <Text>Hello modal</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="splash" component={Splash} options={{ headerShown: false }} />
+        <Stack.Screen name="menu" component={Menu} options={{ headerShown: false }} />
+        <Stack.Screen name="aftermenu" component={AfterMenu} options={{ headerShown: false }} />
+        <Stack.Screen name="listguid" component={ListGuid} options={{ headerShown: false }} />
+        <Stack.Screen name="guiddetails" component={GuidDetails} options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-  },
-});
 
 export default App;
