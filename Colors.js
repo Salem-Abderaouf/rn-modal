@@ -3,3 +3,4 @@ const Colors = {
   FG: '#121212',
   Primary: '#5D55FF',
 }
+export { Colors };
