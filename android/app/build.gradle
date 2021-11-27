@@ -199,7 +199,10 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-   
+    // Mobup
+    implementation('com.mopub:mopub-sdk:+@aar') {
+        transitive = true
+    }
     //Tapdaq
     implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.1'
     implementation 'com.tapdaq.sdk:TapdaqFANAdapter:7.9.1'
