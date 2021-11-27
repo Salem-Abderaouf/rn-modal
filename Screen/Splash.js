@@ -6,7 +6,7 @@ import { Colors } from '../Colors';
 import NativeAd from '../Atoms/NativeAd';
 import Content from '../Content';
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
 
   const adsManager = new NativeAdsManager("276030287583357_276037784249274", 10)
 
@@ -25,7 +25,7 @@ const Splash = () => {
       </View>
 
       <TouchableHighlight
-        onPress={() => console.log('Hello')}
+        onPress={() => navigation.navigate('menu')}
         underlayColor={Colors.Primary}
         style={styles.GetStartedButton}>
         <Text style={styles.GetStartedText}>Get Started</Text>
