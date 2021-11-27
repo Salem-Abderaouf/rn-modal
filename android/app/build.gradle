@@ -187,9 +187,22 @@ android {
         }
     }
 }
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+  
+    //Tapdaq SDK and Adapters
+    maven { url "https://android-sdk.tapdaq.com" }
+    
+  }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+   
+    //Tapdaq
+    implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.1'
+    implementation 'com.tapdaq.sdk:TapdaqFANAdapter:7.9.1'
     // For facebook SDK
     implementation 'com.facebook.android:facebook-android-sdk:latest.release'
     //noinspection GradleDynamicVersion
