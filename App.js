@@ -8,6 +8,10 @@ import Menu from './Screen/Menu'
 import AfterMenu from './Screen/AfterMenu'
 import ListGuid from './Screen/ListGuid'
 import GuidDetails from './Screen/GuidDetails'
+import One from './Guid/One';
+import Two from './Guid/Two';
+import Three from './Guid/Three';
+import Four from './Guid/Four';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +25,10 @@ const App = () => {
         <Stack.Screen name="aftermenu" component={AfterMenu} options={{ headerShown: false }} />
         <Stack.Screen name="listguid" component={ListGuid} options={{ headerShown: false }} />
         <Stack.Screen name="guiddetails" component={GuidDetails} options={{ headerShown: false }} />
+        <Stack.Screen name="one" component={One} options={{ headerShown: false }} />
+        <Stack.Screen name="two" component={Two} options={{ headerShown: false }} />
+        <Stack.Screen name="three" component={Three} options={{ headerShown: false }} />
+        <Stack.Screen name="four" component={Four} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
